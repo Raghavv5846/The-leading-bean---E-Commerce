@@ -1,0 +1,198 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    overflow-x: hidden;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 5em;
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    align-items: baseline;
+
+}
+.nav ul{
+    display: flex;
+    padding-right: 10em;
+    height: 50px;
+}
+.nav ul li{
+    
+    letter-spacing: 2px;
+    overflow: hidden;
+
+
+
+}
+.nav ul li a{
+    
+    font-family: 'Poppins',sans-serif;
+    text-decoration: none;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 50px;
+    width: 100px;
+
+}
+.nav ul li .home{
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    width: 100px;
+    font-size: 1.5em;
+}
+.tlb{
+    color: white;
+    
+    overflow: hidden;
+    font-family: 'Bebas Neue',sans-serif;
+    display: flex;    
+    align-items: center;
+    margin-left: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+    list-style: none;
+    height: 25px;
+}
+.tlb:hover{
+    color: white;
+}
+.cart-item{
+    position: absolute;
+    border-radius:20px ;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    bottom: 14px;
+    left: 20px;
+    background: green;
+}
+.menuimg{
+    background-image: url("../img/pic16\ \(2\).jpg");
+    width: 100%;
+    background-size: 100% 100%;
+    height: 30em;
+    overflow: hidden;
+    
+
+    z-index: 0;
+}
+.menuimg h1{
+    font-family: 'Bebas Neue',sans-serif;
+    z-index: 1;
+    color: white;
+    position: relative;
+    top: 4em;
+    left: 3em;
+    font-size: 3em;
+    overflow: hidden;
+
+    /* color: bal; */
+    /* color: black; */
+    /* text-transform: uppercase; */
+    /* text-shadow: 24 84 white; */
+}
+.parralax-image{
+    width: 100%;
+    background-size: 100% 100%;
+    height: 40em;
+    overflow: hidden;
+    background-attachment: fixed;
+}
+.image1{
+    background-image: url('../img/pic17.jpg');
+}
+.image2{
+    background-image: url('../img/pic18.jpg');
+}
+.image3{
+    background-image: url('../img/pic19.jpg');
+}
+.image4{
+    background-image: url('../img/pic14.jpg');
+}
+.coffee{
+    background: #101418;
+    color: white;
+}
+.coffee h1{
+    position: relative;
+    top: 2em;
+    font-size: 3em;
+    overflow: hidden;
+    text-align: center;
+
+
+}
+.coffee h1{
+    font-family: 'Lexend Zetta',sans-serif;
+    text-transform: uppercase;
+
+    overflow: hidden;
+
+}
+.coffee .items1{
+    font-family: 'Lexend Zetta',sans-serif;
+    font-weight: 500;
+    display: grid;
+    width: 100%;
+    height: 17em;
+    /* background-color: blue; */
+    margin-top: 7em;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    overflow: hidden;
+
+}
+.coffitem{
+    /* border:2px solid black; */
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+    overflow: hidden;
+
+    /* padding: ; */
+}
+.coffitem span{
+    /* position: relative; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Mocktails{
+    font-family: 'Lexend Zetta',sans-serif;
+    font-weight: 500;
+    display: grid;
+    width: 100%;
+    height: 17em;
+    /* background-color: blue; */
+    margin-top: 7em;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(5,1fr);
+    
+}
+footer{
+    background-color: rgb(179, 178, 164);
+    width: 100%;
+    height: 25em;
+    margin-top: 40px;
+    overflow: hidden;
+    margin: 0;
+}
+.foot{
+    height: 18em;
+    position: relative;
+    top: 3em;
+    left: 8em;
+}
