@@ -13,7 +13,6 @@ const flash = require('connect-flash')
 const session=require('express-session');
 const cookieParser = require('cookie-parser');
 const MongoStore = require('connect-mongo');
-const minify=require('./config/minify');
 const toastr=require('express-toastr');
 const toastrMiddleware=require('./config/middleware');
 
@@ -55,11 +54,11 @@ app.set('view engine','ejs');
 app.set('views','./views');
 app.use(toastrMiddleware.checkUrl);
 app.use('/',require('./routes/index'));
-// app.listen(8000,function(err){
-//     if(err){
-//         console.log(`error while running on 8000`);
-//     }
-//     console.log(`800 Server has been succesfully started`);
-// })
+app.listen(8000,function(err){
+    if(err){
+        console.log(`error while running on 8000`);
+    }
+    console.log(`800 Server has been succesfully started`);
+})
 
 exports.app = functions.https.onRequest(app);
