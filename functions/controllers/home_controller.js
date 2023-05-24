@@ -46,7 +46,7 @@ module.exports.menu=async function(req,res){
   }else{
     newCart=await Cart.findOne({userId:cartId});
   }
-  console.log(newCart);
+  
         let cartItems= newCart.items;
         let quantity;
         if(cartItems.length==0){
@@ -65,7 +65,7 @@ module.exports.menu=async function(req,res){
     }
 
 module.exports.cartItems=async function(req,res){
-    console.log("hello",req.body.data);
+    
     let cartId = req.cookies.cartId;
 
     // const cart=path.join(__dirname,'../cart');
@@ -74,7 +74,7 @@ module.exports.cartItems=async function(req,res){
 
     // fileRef.uploadBytes(new Blob([req.body.data]));
     let data=await Cart.findOne({userId:cartId});
-    console.log(data);
+    
         // Do something with the data
         let cartItems=data.items;
         let quantity;
@@ -101,7 +101,7 @@ module.exports.cartItems=async function(req,res){
 module.exports.reservation=function(req,res){
     const keys=Object.keys(req.body)[0];
     const parsedData=JSON.parse(keys);
-    console.log(parsedData);
+    
     User.create({Date: parsedData.Date,first_name: parsedData.first_name,time:parsedData.time,email: parsedData.email,phone_no:parsedData.phone_no,
         party_size: parsedData.party_size}).then((result) => {
         console.log(result);
