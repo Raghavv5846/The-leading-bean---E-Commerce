@@ -5,7 +5,7 @@ const util = require('util');
 const express=require('express');
 const app = express();
 const expressLayouts=require('express-ejs-layouts');
-
+require('./config/view-helpers')(app);
 const db=require('./config/mongoose');
 const path=require('path');
 const fs =require('fs');
@@ -13,14 +13,10 @@ const flash = require('connect-flash')
 const session=require('express-session');
 const cookieParser = require('cookie-parser');
 const MongoStore = require('connect-mongo');
-
-// @ts-ignore
+const minify=require('./config/minify');
 const toastr=require('express-toastr');
 const toastrMiddleware=require('./config/middleware');
-// if (typeof localStorage === "undefined" || localStorage === null) {
-//     var LocalStorage = require('node-localstorage').LocalStorage;
-//     localStorage = new LocalStorage('./scratch');
-//   }
+
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 console.log(path.join(__dirname,'../frontend/css'));
@@ -59,11 +55,11 @@ app.set('view engine','ejs');
 app.set('views','./views');
 app.use(toastrMiddleware.checkUrl);
 app.use('/',require('./routes/index'));
-app.listen(8000,function(err){
-    if(err){
-        console.log(`error while running on 8000`);
-    }
-    console.log(`800 Server has been succesfully started`);
-})
+// app.listen(8000,function(err){
+//     if(err){
+//         console.log(`error while running on 8000`);
+//     }
+//     console.log(`800 Server has been succesfully started`);
+// })
 
 exports.app = functions.https.onRequest(app);

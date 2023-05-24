@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="/css/cartPage.css">
-<link rel="stylesheet" href="/css/loader.css">
+<link rel="stylesheet" href="<%=assetPath('css/cartPage.css')%>">
+<link rel="stylesheet" href="<%=assetPath('css/loader.css')%>">
 <div id="overlay" style="display: none;"></div>
 <%-include('header')%>
 <%if(cartItems.length===0){%>
@@ -76,14 +76,13 @@
     let products=shopping_cart.querySelectorAll('.product');
     let total=0;
     products.forEach((Element)=>{
-      console.log();
+      
       total+=parseInt(Element.querySelector('.product-line-price').textContent);
     })
   let cart_total=$("#cart-subtotal").text(total);
   let cart_tax=$('#cart-tax').text(parseFloat(total*0.05));
   let cart_shipping=$('#cart-shipping');
-  console.log(cart_tax.text());
-  console.log(parseInt(cart_total.text())+parseInt(cart_tax.text())+parseInt(cart_shipping.text()));
+  
   $('#cart-total').text(parseInt(cart_total.text())+parseInt(cart_tax.text())+parseInt(cart_shipping.text()))
   
   console.log(total);
@@ -99,25 +98,25 @@
             let removed_Item=e.target.parentNode.parentNode.querySelector('.product-title');
             let removed_Item_quantity=e.target.parentNode.parentNode.querySelector('.product-quantity').children[0];
             let cart_quantity=$('.cart-item');
-            console.log("removed",removed_Item_quantity.getAttribute('value'));
+            
             let local_data=JSON.parse(localStorage.getItem('cartItems'));
             removed_Item_quantity =removed_Item_quantity.getAttribute('value');
             let quant=localStorage.getItem('quantity');
-            console.log("quant",localStorage.getItem('quantity'));
+            
             quant--;
             cart_quantity.text(quant);
             localStorage.setItem('quantity', quant);
             if(local_data!=null){
-              console.log(local_data);
+              
             let index=local_data.findIndex(e=>e.name===removed_Item.textContent);
-            console.log("localdata",local_data);
+            
             if(index!=-1){
               local_data.splice(index,1);
             }
             let quant_removed=local_data.filter(e=>{return e.name===removed_Item.textContent});
             localStorage.setItem('cartItems', JSON.stringify(local_data));
             let cart_item= JSON.parse('<%- JSON.stringify(cartItems) %>');
-            console.log("quant",cart_item);
+            
           }
 
             
@@ -131,7 +130,7 @@
           $('.loader').hide();
               $('#layout-main').html(data);
               // changing the total
-            console.log("successfullt cahnged");
+            
             let total=0;
                 local_data.forEach(element => {
                 total+=parseInt(element.price);
@@ -139,10 +138,8 @@
                 let cart_total=$("#cart-subtotal").text(total);
                 let cart_tax=$('#cart-tax').text(parseFloat(total*0.05));
                 let cart_shipping=$('#cart-shipping');
-                console.log(cart_tax.text());
-                console.log(parseInt(cart_total.text())+parseInt(cart_tax.text())+parseInt(cart_shipping.text()));
+                
                 $('#cart-total').text(parseInt(cart_total.text())+parseInt(cart_tax.text())+parseInt(cart_shipping.text()))
-  console.log("hiiiiiiiiiiiiiiiiii");
             })
         })
     })

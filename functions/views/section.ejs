@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/addtocart.css">
+<link rel="stylesheet" href="<%=assetPath('css/addtocart.css')%>">
 <%- req.toastr.render() %>
 <%-include('header');%>
 <section class="sec1">
@@ -211,7 +211,7 @@
     </div>
   </section>
 <%-include('footer');%>
-<script src="/js/addtocart.js"></script>
+<script src="<%=assetPath('js/addtocart.js')%>"></script>
 
 <% if (flash.success && flash.success.length > 0) { %>
   <script>
