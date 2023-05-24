@@ -1,0 +1,138 @@
+[debug] [2023-05-24T15:46:44.011Z] ----------------------------------------------------------------------
+[debug] [2023-05-24T15:46:44.013Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\RAGHAV\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-05-24T15:46:44.013Z] CLI Version:   12.0.0
+[debug] [2023-05-24T15:46:44.014Z] Platform:      win32
+[debug] [2023-05-24T15:46:44.014Z] Node Version:  v18.4.0
+[debug] [2023-05-24T15:46:44.015Z] Time:          Wed May 24 2023 21:16:44 GMT+0530 (India Standard Time)
+[debug] [2023-05-24T15:46:44.015Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-24T15:46:44.080Z] Object ".hosting" in "firebase.json" has unknown property: {"additionalProperty":"rules"}
+[debug] [2023-05-24T15:46:44.080Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2023-05-24T15:46:44.080Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2023-05-24T15:46:44.085Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-24T15:46:44.085Z] > authorizing via signed-in user (raghav.pareek5846@gmail.com)
+[debug] [2023-05-24T15:46:44.085Z] [iam] checking project the-leading-bean for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-24T15:46:44.088Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions [none]
+[debug] [2023-05-24T15:46:44.088Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions x-goog-quota-user=projects/the-leading-bean
+[debug] [2023-05-24T15:46:44.088Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-24T15:46:45.216Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions 200
+[debug] [2023-05-24T15:46:45.217Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-24T15:46:45.218Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/the-leading-bean/serviceAccounts/the-leading-bean@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-05-24T15:46:45.218Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/the-leading-bean/serviceAccounts/the-leading-bean@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-05-24T15:46:47.324Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/the-leading-bean/serviceAccounts/the-leading-bean@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-05-24T15:46:47.325Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/the-leading-bean/serviceAccounts/the-leading-bean@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-05-24T15:46:47.326Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-leading-bean [none]
+[debug] [2023-05-24T15:46:48.244Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-leading-bean 200
+[debug] [2023-05-24T15:46:48.245Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-leading-bean {"projectId":"the-leading-bean","projectNumber":"490673313153","displayName":"The leading Bean","name":"projects/the-leading-bean","resources":{"hostingSite":"the-leading-bean","storageBucket":"the-leading-bean.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_c0aa3f1c-ba55-4d37-b37f-b141197730cb"}
+[info] 
+[info] === Deploying to 'the-leading-bean'...
+[info] 
+[info] i  deploying functions, hosting 
+[info] +  functions: Finished running predeploy script. 
+[debug] [2023-05-24T15:46:48.263Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-leading-bean [none]
+[debug] [2023-05-24T15:46:49.520Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-leading-bean 200
+[debug] [2023-05-24T15:46:49.521Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-leading-bean {"projectId":"the-leading-bean","projectNumber":"490673313153","displayName":"The leading Bean","name":"projects/the-leading-bean","resources":{"hostingSite":"the-leading-bean","storageBucket":"the-leading-bean.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_c0aa3f1c-ba55-4d37-b37f-b141197730cb"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-05-24T15:46:49.527Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-05-24T15:46:49.527Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/the-leading-bean
+[debug] [2023-05-24T15:46:49.529Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-05-24T15:46:49.529Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/the-leading-bean
+[debug] [2023-05-24T15:46:49.532Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/cloudbuild.googleapis.com [none]
+[debug] [2023-05-24T15:46:49.532Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/cloudbuild.googleapis.com x-goog-quota-user=projects/the-leading-bean
+[debug] [2023-05-24T15:46:49.534Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/artifactregistry.googleapis.com [none]
+[debug] [2023-05-24T15:46:49.535Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/artifactregistry.googleapis.com x-goog-quota-user=projects/the-leading-bean
+[debug] [2023-05-24T15:46:50.520Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/runtimeconfig.googleapis.com 200
+[debug] [2023-05-24T15:46:50.520Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-05-24T15:46:50.544Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/artifactregistry.googleapis.com 200
+[debug] [2023-05-24T15:46:50.544Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-05-24T15:46:51.794Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/cloudbuild.googleapis.com 200
+[debug] [2023-05-24T15:46:51.794Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-05-24T15:46:51.857Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/cloudfunctions.googleapis.com 200
+[debug] [2023-05-24T15:46:51.857Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/the-leading-bean/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-05-24T15:46:51.858Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-leading-bean/adminSdkConfig [none]
+[debug] [2023-05-24T15:46:53.283Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/the-leading-bean/adminSdkConfig 200
+[debug] [2023-05-24T15:46:53.283Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/the-leading-bean/adminSdkConfig {"projectId":"the-leading-bean","storageBucket":"the-leading-bean.appspot.com","locationId":"asia-south1"}
+[debug] [2023-05-24T15:46:53.284Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/the-leading-bean/configs [none]
+[debug] [2023-05-24T15:46:54.562Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/the-leading-bean/configs 200
+[debug] [2023-05-24T15:46:54.562Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/the-leading-bean/configs {}
+[debug] [2023-05-24T15:46:54.564Z] Validating nodejs source
+[debug] [2023-05-24T15:46:57.342Z] > [functions] package.json contents: {
+  "name": "tlb",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.0.0",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "express-toastr": "^2.0.2",
+    "firebase": "^9.22.0",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.4.0",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rev": "^10.0.0",
+    "gulp-uglify-es": "^3.0.0",
+    "imagemin": "^8.0.1",
+    "memorystore": "^1.6.7",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.1.0",
+    "multer": "^1.4.5-lts.1",
+    "node-localstorage": "^2.2.1",
+    "redis": "^4.6.6",
+    "sharp": "^0.32.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true,
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC"
+}
+[debug] [2023-05-24T15:46:57.343Z] Building nodejs source
+[debug] [2023-05-24T15:46:57.344Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-05-24T15:46:57.352Z] Found firebase-functions binary at 'C:\Users\RAGHAV\OneDrive\Desktop\projects\leadingbean\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-05-24T15:46:57.730Z] Serving at port 8522
+
+[debug] [2023-05-24T15:46:58.779Z] mongoose has connected
+
+[debug] [2023-05-24T15:46:59.011Z] C:\Users\RAGHAV\OneDrive\Desktop\projects\leadingbean\frontend\css
+
+[debug] [2023-05-24T15:47:00.562Z] FetchError: request to http://localhost:8522/__/quitquitquit failed, reason: connect ECONNREFUSED ::1:8522
+    at ClientRequest.<anonymous> (C:\Users\RAGHAV\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\node-fetch\lib\index.js:1505:11)
+    at ClientRequest.emit (node:events:537:28)
+    at ClientRequest.emit (node:domain:482:12)
+    at Socket.socketErrorListener (node:_http_client:465:9)
+    at Socket.emit (node:events:537:28)
+    at Socket.emit (node:domain:482:12)
+    at emitErrorNT (node:internal/streams/destroy:151:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:116:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+[error] 
+[error] Error: An unexpected error has occurred.
