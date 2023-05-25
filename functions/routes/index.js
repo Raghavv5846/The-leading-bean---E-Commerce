@@ -4,7 +4,7 @@ const multer  = require('multer');
 const upload = multer();
 const homeController = require('../controllers/home_controller');
 const cart_page_controller=require('../controllers/cart_page');
-router.get('/',homeController.home);
+
 
 router.get('/menu',homeController.menu);
 

@@ -17,33 +17,33 @@ function generateCartId() {
   
     return timestamp + randomChars;
   }
-  
-module.exports.home=function(req,res){
-    
-    res.sendFile(path.join(__dirname,'../../public/index.html'));
-}
+
 module.exports.menu=async function(req,res){
-    let cartId = req.cookies.cartId;
-  if (!cartId) {
+  let cartId = req.session.cartId;
+
+    
+    if (!cartId) {
     // Generate a new cart identifier
     cartId = generateCartId();
     // Set the cartId cookie with the identifier
-    res.cookie('cartId', cartId, { maxAge: 86400000 }); // expiration time for the cookie (ie., 24 hours)
-
+    req.session.cartId=cartId;
+    // res.cookie('cartId', cartId, { maxAge: 86400000 }); // expiration time for the cookie (ie., 24 hours)
+    
     // Create a new cart for the user
     newCart = await Cart.create({
       userId: cartId,
       items: [] // Empty items array for now
     });
-
+    
     newCart.save()
-      .then(() => {
-        console.log('Cart created successfully for user:', cartId);
+    .then(() => {
+      console.log('Cart created successfully for user:', cartId);
       })
       .catch((error) => {
         console.error('Error creating cart for user:', cartId);
       });
   }else{
+    console.log("helooooo");
     newCart=await Cart.findOne({userId:cartId});
   }
   
@@ -66,7 +66,7 @@ module.exports.menu=async function(req,res){
 
 module.exports.cartItems=async function(req,res){
     
-    let cartId = req.cookies.cartId;
+    let cartId = req.session.cartId;
 
     // const cart=path.join(__dirname,'../cart');
     // fs.writeFileSync(cart,req.body.data);

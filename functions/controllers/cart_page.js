@@ -2,7 +2,7 @@ const path=require('path');
 const fs=require('fs');
 const Cart=require('../models/cart');
 module.exports.cartPage=async function(req,res){
-    let cartId = req.cookies.cartId;
+    let cartId = req.session.cartId;
     const data= await Cart.findOne({userId:cartId});
         // console.log("hellloooo",JSON.parse(data));
         let cartItems=data.items;
@@ -20,7 +20,7 @@ module.exports.cartPage=async function(req,res){
         });
     };
 module.exports.remove=async function(req,res){
-    let cartId = req.cookies.cartId;
+    let cartId = req.session.cartId;
 
     let data=JSON.parse(req.body.data);
     let index=data.findIndex(e=>e.name===req.body.removed);
@@ -29,7 +29,7 @@ module.exports.remove=async function(req,res){
             // send an error response or close the connection
             res.status(504).send('Gateway Timeout');
         }, 5000));
-        console.log("hello");
+        
     }
     if(index!=-1){
         data.splice(index,1);

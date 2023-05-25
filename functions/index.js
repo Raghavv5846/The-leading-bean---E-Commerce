@@ -21,15 +21,15 @@ app.use(express.json());
 console.log(path.join(__dirname,'../frontend/css'));
 app.use(express.static(path.join(__dirname,'../public')));
 app.use(expressLayouts);
-app.use(cookieParser('secret'));
 app.use(session({
-    cookie:{
-        secure: true,
-        maxAge:60000
-           },
+    name:"tlb",
     secret: 'secret',
-    saveUninitialized: true,
+    saveUninitialized: false,
     resave: false,
+    cookie:{
+        secure:true,
+        maxAge:86400000
+           },
     store: MongoStore.create(
         {
             mongoUrl: `mongodb+srv://raghavpareek5846:Raghav5846@tlb.7lfempd.mongodb.net/?retryWrites=true&w=majority`,
@@ -41,6 +41,7 @@ app.use(session({
         }
     )
     }));
+    app.set('trust proxy', 1)
 app.use(flash());
 app.use(toastr({
     closeButton: true
@@ -54,11 +55,11 @@ app.set('view engine','ejs');
 app.set('views','./views');
 app.use(toastrMiddleware.checkUrl);
 app.use('/',require('./routes/index'));
-// app.listen(8000,function(err){
-//     if(err){
-//         console.log(`error while running on 8000`);
-//     }
-//     console.log(`800 Server has been succesfully started`);
-// })
+app.listen(8000,function(err){
+    if(err){
+        console.log(`error while running on 8000`);
+    }
+    console.log(`800 Server has been succesfully started`);
+})
 
 exports.app = functions.https.onRequest(app);
