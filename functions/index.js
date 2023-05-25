@@ -41,7 +41,6 @@ app.use(session({
         }
     )
     }));
-    app.set('trust proxy', 1)
 app.use(flash());
 app.use(toastr({
     closeButton: true
