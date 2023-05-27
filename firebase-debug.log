@@ -1,0 +1,54 @@
+[debug] [2023-05-27T13:04:09.011Z] ----------------------------------------------------------------------
+[debug] [2023-05-27T13:04:09.014Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\uder\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init --debug
+[debug] [2023-05-27T13:04:09.015Z] CLI Version:   12.2.1
+[debug] [2023-05-27T13:04:09.015Z] Platform:      win32
+[debug] [2023-05-27T13:04:09.015Z] Node Version:  v20.2.0
+[debug] [2023-05-27T13:04:09.016Z] Time:          Sat May 27 2023 18:34:09 GMT+0530 (India Standard Time)
+[debug] [2023-05-27T13:04:09.016Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-27T13:04:09.088Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-27T13:04:09.090Z] > authorizing via signed-in user (raghav.pareek5846@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\uder\OneDrive\Desktop\theleadingbean\The-leading-bean---E-Commerce
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[error] 
+[error] Error: Must select at least one feature. Use SPACEBAR to select features, or specify a feature by running firebase init [feature_name]
+[debug] [2023-05-27T13:04:41.975Z] ----------------------------------------------------------------------
+[debug] [2023-05-27T13:04:41.978Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\uder\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-05-27T13:04:41.978Z] CLI Version:   12.2.1
+[debug] [2023-05-27T13:04:41.979Z] Platform:      win32
+[debug] [2023-05-27T13:04:41.979Z] Node Version:  v20.2.0
+[debug] [2023-05-27T13:04:41.979Z] Time:          Sat May 27 2023 18:34:41 GMT+0530 (India Standard Time)
+[debug] [2023-05-27T13:04:41.979Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-27T13:04:42.054Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-27T13:04:42.054Z] > authorizing via signed-in user (raghav.pareek5846@gmail.com)
+[debug] [2023-05-27T13:04:42.054Z] [iam] checking project the-leading-bean for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-27T13:04:42.056Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions [none]
+[debug] [2023-05-27T13:04:42.057Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions x-goog-quota-user=projects/the-leading-bean
+[debug] [2023-05-27T13:04:42.057Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-27T13:04:45.439Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions 200
+[debug] [2023-05-27T13:04:45.439Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-05-27T13:04:45.440Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/the-leading-bean/serviceAccounts/the-leading-bean@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-05-27T13:04:45.440Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/the-leading-bean/serviceAccounts/the-leading-bean@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-05-27T13:04:48.653Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/the-leading-bean/serviceAccounts/the-leading-bean@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-05-27T13:04:48.654Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/the-leading-bean/serviceAccounts/the-leading-bean@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-05-27T13:04:48.655Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/the-leading-bean [none]
+[debug] [2023-05-27T13:04:54.230Z] Failed to make request to https://firebase.googleapis.com/v1beta1/projects/the-leading-bean
+[debug] [2023-05-27T13:04:54.748Z] FirebaseError: Failed to make request to https://firebase.googleapis.com/v1beta1/projects/the-leading-bean
+    at RetryOperation._fn (C:\Users\uder\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:242:31)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project the-leading-bean. Please make sure the project exists and your account has permission to access it.
