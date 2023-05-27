@@ -1,10 +1,6 @@
 {
   "hosting": {
     "public": "public",
-    "rules": {
-      ".read": "true",
-      ".write": "true"
-    },
     "rewrites": [{
       "source": "/**",
       "function": "app"
