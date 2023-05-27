@@ -15,7 +15,8 @@ const cookieParser = require('cookie-parser');
 const MongoStore = require('connect-mongo');
 const toastr=require('express-toastr');
 const toastrMiddleware=require('./config/middleware');
-
+const cors = require('cors');
+app.use(cors());
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 console.log(path.join(__dirname,'../frontend/css'));
@@ -23,12 +24,14 @@ app.use(express.static(path.join(__dirname,'../public')));
 app.use(expressLayouts);
 app.use(cookieParser());
 app.use(session({
-    name:"tlb",
+    name:"__session",
     secret: 'secret',
     saveUninitialized: false,
     resave: false,
     cookie:{
-        maxAge:86400000
+        maxAge:86400000,
+        httpOnly:true,
+        secure:true
            },
     store: MongoStore.create(
         {

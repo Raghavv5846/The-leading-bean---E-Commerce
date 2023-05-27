@@ -4,7 +4,8 @@
     "rewrites": [{
       "source": "/**",
       "function": "app"
-    }],
+    }
+  ],
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -3,7 +3,7 @@ const fs=require('fs');
 const Cart=require('../models/cart');
 const { cartItems } = require('./home_controller');
 module.exports.cartPage=async function(req,res){
-    let cartId = req.cookies.cartId;
+    let cartId = req.cookies.__session;
     const data= await Cart.findOne({userId:cartId});
     let cartItems;
     if(data){
@@ -27,7 +27,7 @@ module.exports.cartPage=async function(req,res){
         });
     };
 module.exports.remove=async function(req,res){
-    let cartId = req.cookies.cartId;
+    let cartId = req.cookies.__session;
 
     let data=JSON.parse(req.body.data);
     let index=data.findIndex(e=>e.name===req.body.removed);
