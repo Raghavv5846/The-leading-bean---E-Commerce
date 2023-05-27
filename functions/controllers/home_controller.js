@@ -25,7 +25,7 @@ module.exports.menu=async function(req,res){
     cartId = generateCartId();
     // Set the cartId cookie with the identifier
     // req.session.cartId=cartId;
-    res.setHeader('Set-Cookie', `cartId=${cartId}; Max-Age=86400000;secure`);
+    res.setHeader('Set-Cookie', `cartId=${cartId}; Max-Age=86400000;`);
     // res.cookie('cartId', cartId, { maxAge: 86400000 }); // expiration time for the cookie (ie., 24 hours)
 
     // Create a new cart for the user
