@@ -1,0 +1,17 @@
+[debug] [2023-05-27T06:26:11.294Z] ----------------------------------------------------------------------
+[debug] [2023-05-27T06:26:11.296Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\uder\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-05-27T06:26:11.296Z] CLI Version:   12.2.1
+[debug] [2023-05-27T06:26:11.296Z] Platform:      win32
+[debug] [2023-05-27T06:26:11.296Z] Node Version:  v20.2.0
+[debug] [2023-05-27T06:26:11.297Z] Time:          Sat May 27 2023 11:56:11 GMT+0530 (India Standard Time)
+[debug] [2023-05-27T06:26:11.297Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-27T06:26:11.350Z] Object ".hosting" in "firebase.json" has unknown property: {"additionalProperty":"rules"}
+[debug] [2023-05-27T06:26:11.351Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2023-05-27T06:26:11.351Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2023-05-27T06:26:11.355Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-27T06:26:11.355Z] > authorizing via signed-in user (raghav.pareek5846@gmail.com)
+[debug] [2023-05-27T06:26:11.355Z] [iam] checking project the-leading-bean for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-05-27T06:26:11.357Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions [none]
+[debug] [2023-05-27T06:26:11.357Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions x-goog-quota-user=projects/the-leading-bean
+[debug] [2023-05-27T06:26:11.357Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/the-leading-bean:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
