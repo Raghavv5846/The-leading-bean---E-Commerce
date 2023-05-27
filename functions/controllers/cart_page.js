@@ -1,11 +1,18 @@
 const path=require('path');
 const fs=require('fs');
 const Cart=require('../models/cart');
+const { cartItems } = require('./home_controller');
 module.exports.cartPage=async function(req,res){
     let cartId = req.session.cartId;
     const data= await Cart.findOne({userId:cartId});
+    let cartItems;
+    if(data){
         // console.log("hellloooo",JSON.parse(data));
-        let cartItems=data.items;
+        cartItems=data.items;
+    }
+    else{
+        cartItems=[];
+    }
         let quantity;
         if(cartItems.length==0){
             quantity=0
