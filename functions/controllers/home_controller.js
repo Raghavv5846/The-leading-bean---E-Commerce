@@ -19,13 +19,13 @@ function generateCartId() {
   }
 
 module.exports.menu=async function(req,res){
-  let cartId = req.cookies.cartId;
+  let cartId = req.cookies.__session;
     if (!cartId) {
     // Generate a new cart identifier
     cartId = generateCartId();
     // Set the cartId cookie with the identifier
     // req.session.cartId=cartId;
-    res.setHeader('Set-Cookie', `cartId=${cartId}; Max-Age=86400000;`);
+    res.setHeader('Set-Cookie', `__session=${cartId}; Max-Age=86400000;`);
     // res.cookie('cartId', cartId, { maxAge: 86400000 }); // expiration time for the cookie (ie., 24 hours)
 
     // Create a new cart for the user
@@ -65,7 +65,7 @@ module.exports.menu=async function(req,res){
 
 module.exports.cartItems=async function(req,res){
     
-    let cartId = req.cookies.cartId;
+    let cartId = req.cookies.__session;
     console.log(cartId);
     // const cart=path.join(__dirname,'../cart');
     // fs.writeFileSync(cart,req.body.data);
